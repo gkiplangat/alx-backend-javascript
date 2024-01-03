@@ -1,10 +1,8 @@
-export default function createIteratorObject(report) {
+export default function appendToEachArrayValue(array, appendString) {
   const ans = [];
-  for (const department in report.allEmployees) {
-    if (report.allEmployees[department]) {
-      const employees = report.allEmployees[department];
-      ans.push(...employees);
-    }
+  for (const value of array) {
+    ans.push(appendString + value);
   }
+
   return ans;
 }
